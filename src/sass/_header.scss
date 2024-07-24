@@ -1,0 +1,124 @@
+.splash {
+  background-image: url("../images/Images/background.png");
+  height: 946px;
+  background-position: center top;
+  background-size: cover;
+  text-transform: uppercase;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  z-index: -1;
+  
+  &::after {
+    content: "";
+    background-color: $color-dark;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    opacity: 0.69;
+    z-index: -1;
+  }
+  
+  .header {
+    width: 1218px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 32px;
+    padding-left: 70px;
+    position: absolute;
+  
+    .header__logo{
+      .header__logo__title {
+        margin: 0;
+        font-size: 34px;
+        letter-spacing: 9px;
+        color: $color-light;
+        font-weight: $font-black;
+      }
+  
+      .header__logo__subtitle {
+        font-size: 16px;
+        letter-spacing: 4px;
+        color: $color-light;
+        font-weight: $font-black;
+        margin: 0;
+        padding: 5px 0 0 3px;
+      }
+    }
+  
+    .header__nav {
+      a {
+        opacity: 0.502;
+        font-size: 18px;
+        letter-spacing: 1px;
+        color: $color-light;
+        font-weight: $font-regular;
+        text-decoration: none;
+        padding-right: 22px;
+      }
+    }
+  }
+  
+  .hero {
+    width: 1250px;
+    height: 169px;
+    top: 300px;
+    position: absolute;
+  
+    .hero__title {
+      font-size: 100px;
+      letter-spacing: 16px;
+      line-height: 95px;
+      color: $color-main;
+      font-weight: 700;
+    }
+  
+    .hero__title--1 {
+      text-align: left;
+      margin: 0 0 0 48px;
+    }
+  
+    .hero__title--2 {
+      text-align: right;
+      margin: 0;
+    }
+  
+    .hero__line {
+      content: "";
+      width: 270px;
+      height: 6px;
+      background: $color-main;
+      position: relative;
+      left: 50%;
+      transform: translateX(-50%);
+      margin-top: 60px;
+    }
+  }
+  
+  .hero__discover {
+    top: 800px;
+    position: absolute;
+    margin-bottom: 42px;
+    text-align: center;
+  
+    .hero__discover__txt {
+      font-size: 34px;
+      letter-spacing: 6px;
+      color: $color-light;
+      font-weight: $font-regular;
+      margin: 0;
+      padding-bottom: 32px;
+    }
+  
+    .hero__discover__icon {
+      font-size: 40px;
+      letter-spacing: 8px;
+      line-height: 40px;
+      color: $color-light;
+      margin: 0;
+    }
+  }
+  
+}
