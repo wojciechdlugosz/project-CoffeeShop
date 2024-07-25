@@ -6,6 +6,7 @@ export const select = {
     contact: '.contact-wrapper',
   },
   templateOf: {
+    home: '#template-home',
     contact: '#template-contact',
   },
   nav: {
@@ -23,4 +24,5 @@ export const classNames = {
 };
 
 export const templates = {
+  home: Handlebars.compile(document.querySelector(select.templateOf.home).innerHTML)
 };
