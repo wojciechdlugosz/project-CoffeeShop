@@ -49,20 +49,18 @@
       }
     }
   
-    .header__nav {
-      a {
-        opacity: 0.502;
-        font-size: 18px;
-        letter-spacing: 1px;
-        color: $color-light;
-        font-weight: $font-regular;
-        text-decoration: none;
-        padding-right: 22px;
+    .header__nav a {
+      opacity: 0.502;
+      font-size: 18px;
+      letter-spacing: 1px;
+      color: $color-light;
+      font-weight: $font-regular;
+      text-decoration: none;
+      padding-right: 22px;
+    }
 
-        &.active {
-          opacity: 1;
-        }
-      }
+    .header__nav a.active {
+      opacity: 1;
     }
   }
   

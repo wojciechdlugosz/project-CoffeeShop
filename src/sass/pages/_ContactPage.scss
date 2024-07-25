@@ -1,0 +1,44 @@
+.contact {
+  text-transform: uppercase;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+  
+form {
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+  margin-top: 34px;
+  font-size: 24px;
+  letter-spacing: 4px;
+  font-weight: $font-semibold;
+  
+  label {
+    margin-bottom: 28px;
+  }
+  
+  .input-common {
+    width: 500px;
+    margin-bottom: 28px;
+    border: solid 3px $color-dark;
+  }
+  
+  input {
+    height: 74px;
+  }
+  
+  textarea {
+    height: 156px;
+  }
+  
+  input[type="submit"] {
+    background-color: $color-main;
+    border: none;
+    color: $color-light;
+    width: 238px;
+    margin-top: 20px;
+    letter-spacing: 4px;
+    font-weight: $font-semibold;
+  }
+}

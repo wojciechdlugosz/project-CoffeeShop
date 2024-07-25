@@ -1,3 +1,4 @@
+import Contact from './components/Contact.js';
 import {select, classNames} from './settings.js';
 
 const app = {
@@ -51,10 +52,18 @@ const app = {
 
   },
 
+  initContact: function(){
+    const thisApp = this;
+
+    const contactElem = document.querySelector(select.containerOf.contact);
+    thisApp.contact = new Contact(contactElem);
+  },
+
   init: function() {
     const thisApp = this;
 
     thisApp.initPages();
+    thisApp.initContact();
   },
 };
 

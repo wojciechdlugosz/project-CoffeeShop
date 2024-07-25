@@ -1,0 +1,20 @@
+h2 {
+  font-size: 66px;
+  color: $color-main;
+  font-weight: 700;
+  letter-spacing: 10px;
+  position: relative;
+  margin-top: 60px;
+
+  &::after {
+    content: "";
+    display: block;
+    background-color: $color-main;
+    width: 730px;
+    height: 6px;
+    position: absolute;
+    top: 135%;
+    left: 50%;
+    transform: translate(-50%);
+  }
+}

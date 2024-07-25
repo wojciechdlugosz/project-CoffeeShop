@@ -5,6 +5,9 @@ export const select = {
     products: '.products-wrapper',
     contact: '.contact-wrapper',
   },
+  templateOf: {
+    contact: '#template-contact',
+  },
   nav: {
     links: '.header__nav a'
   }
@@ -17,4 +20,7 @@ export const classNames = {
   nav: {
     active: 'active'
   }
+};
+
+export const templates = {
 };
