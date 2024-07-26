@@ -6,7 +6,6 @@ export const select = {
     contact: '.contact-wrapper',
   },
   templateOf: {
-    home: '#template-home',
     products: '#template-products',
     contact: '#template-contact',
   },

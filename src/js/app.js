@@ -53,7 +53,7 @@ const app = {
 
   },
 
-  initProducts: function(){
+  generateProducts: function(){
     const thisApp = this;
 
     const productsHeaderHTML = '<h2 class="page__title">products</h2>';
@@ -80,9 +80,9 @@ const app = {
       .then(function(parsedResponse){
         //console.log('parsedResponse', parsedResponse);
         thisApp.data.products = parsedResponse;
-      });
 
-    console.log('thisApp.data', JSON.stringify(thisApp.data));
+        thisApp.generateProducts();
+      });
   },
 
   initContact: function(){
@@ -97,7 +97,6 @@ const app = {
 
     thisApp.initPages();
     thisApp.initContact();
-    //thisApp.initProducts();
     thisApp.initData();
   },
 };

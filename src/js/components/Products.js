@@ -15,12 +15,15 @@ class Products {
     const thisProducts = this;
 
     thisProducts.dom = {};
-    thisProducts.dom.wrapper = document.querySelector(select.containerOf.products);
+    thisProducts.dom.wrapper = document.querySelectorAll(select.containerOf.products);
 
     const generatedHTML = templates.products(thisProducts.data);
     thisProducts.element = utils.createDOMFromHTML(generatedHTML);
-    thisProducts.dom.wrapper.appendChild(thisProducts.element);
-    console.log(thisProducts.dom.wrapper);
+    
+    for(let productsWrapper of thisProducts.dom.wrapper){
+      const clonedDomElement = thisProducts.element.cloneNode(true);
+      productsWrapper.appendChild(clonedDomElement);
+    }
   }
 }
 
