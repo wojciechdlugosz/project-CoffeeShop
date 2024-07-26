@@ -1,5 +1,6 @@
 import Contact from './components/Contact.js';
-import Home from './components/Products.js';
+import Products from './components/Products.js';
+import utils from './utils.js';
 import {select, classNames, settings} from './settings.js';
 
 const app = {
@@ -26,7 +27,6 @@ const app = {
       link.addEventListener('click', function(event){
         const clickedElement = this;
         event.preventDefault();
-        console.log(clickedElement);
 
         const id = clickedElement.getAttribute('href').replace('#', '');
 
@@ -56,8 +56,14 @@ const app = {
   initProducts: function(){
     const thisApp = this;
 
-    const productsElem = document.querySelector(select.containerOf.products);
-    thisApp.home = new Home(productsElem);
+    const productsHeaderHTML = '<h2 class="page__title">products</h2>';
+    const productsHeaderDOM = utils.createDOMFromHTML(productsHeaderHTML);
+    const productsWrapper = document.querySelector(select.containerOf.products);
+    productsWrapper.appendChild(productsHeaderDOM);
+
+    for (let productData in thisApp.data.products){
+      new Products(thisApp.data.products[productData].id, thisApp.data.products[productData]);
+    }
   },
 
   initData: function(){
@@ -72,7 +78,7 @@ const app = {
         return rawResponse.json();
       })
       .then(function(parsedResponse){
-        console.log('parsedResponse', parsedResponse);
+        //console.log('parsedResponse', parsedResponse);
         thisApp.data.products = parsedResponse;
       });
 
@@ -91,7 +97,7 @@ const app = {
 
     thisApp.initPages();
     thisApp.initContact();
-    thisApp.initProducts();
+    //thisApp.initProducts();
     thisApp.initData();
   },
 };

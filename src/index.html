@@ -46,13 +46,12 @@
 
         <script id="template-products" type="text/x-handlebars-template">
             <div class="products">
-                <h2 class="page__title">products</h2>
                 <article class="products__box--left">
                     <div class="product__img">
                         {{{ image }}}
                     </div>
                     <div class="product__info">
-                        <h3 class="product__name">01. {{ name }}</h3>
+                        <h3 class="product__name">{{ number }} {{ name }}</h3>
                         <div class="product__description">
                             <p>{{ description }}</p>
                         </div>
