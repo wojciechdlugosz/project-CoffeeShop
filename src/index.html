@@ -40,13 +40,13 @@
                 <div class="products-wrapper container"></div>
             </section>
             <section id="contact">
-                <div class="contact-wrapper container"></div>
+                <div class="contact-wrapper"></div>
             </section>
         </div>
 
         <script id="template-products" type="text/x-handlebars-template">
             <div class="products">
-                <article class="products__box--left">
+                <article class="products__box row">
                     <div class="product__img">
                         {{{ image }}}
                     </div>
@@ -56,8 +56,8 @@
                             <p>{{ description }}</p>
                         </div>
                         <div class="product__params">
-                            <p>roasting: {{ roasting }} /10</p>
-                            <p>intensity: {{ intensity }} /10</p>
+                            <p>roasting:<span> {{ roasting }}/10 </span></p>
+                            <p>intensity:<span> {{ intensity }}/10 </span></p>
                         </div>
                     </div>
                 </article>
