@@ -1,6 +1,6 @@
 import Contact from './components/Contact.js';
-import Home from './components/Home.js';
-import {select, classNames} from './settings.js';
+import Home from './components/Products.js';
+import {select, classNames, settings} from './settings.js';
 
 const app = {
   initPages: function(){
@@ -53,11 +53,30 @@ const app = {
 
   },
 
-  initHome: function(){
+  initProducts: function(){
     const thisApp = this;
 
-    const homeElem = document.querySelector(select.containerOf.home);
-    thisApp.home = new Home(homeElem);
+    const productsElem = document.querySelector(select.containerOf.products);
+    thisApp.home = new Home(productsElem);
+  },
+
+  initData: function(){
+    const thisApp = this;
+
+    thisApp.data = {};
+
+    const url = settings.db.url + '/' + settings.db.products;
+
+    fetch(url)
+      .then(function(rawResponse){
+        return rawResponse.json();
+      })
+      .then(function(parsedResponse){
+        console.log('parsedResponse', parsedResponse);
+        thisApp.data.products = parsedResponse;
+      });
+
+    console.log('thisApp.data', JSON.stringify(thisApp.data));
   },
 
   initContact: function(){
@@ -72,7 +91,8 @@ const app = {
 
     thisApp.initPages();
     thisApp.initContact();
-    thisApp.initHome();
+    thisApp.initProducts();
+    thisApp.initData();
   },
 };
 

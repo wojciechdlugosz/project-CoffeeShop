@@ -15,11 +15,11 @@
                     <p class="header__logo__title">El Tigre</p>
                     <p class="header__logo__subtitle">Venezuela Coffee Beans</p>
                 </div>
-                <div class="header__nav">
+                <nav class="header__nav">
                     <a href="#home">Home</a>
                     <a href="#products">Products</a>
                     <a href="#contact">Contact</a>
-                </div>
+                </nav>
                 <div class="hero">
                     <h1 class="hero__title hero__title--1">home of</h1>
                     <h1 class="hero__title hero__title--2">original tastes</h1>
@@ -44,8 +44,25 @@
             </section>
         </div>
 
-        <script id="template-home">
-
+        <script id="template-products" type="text/x-handlebars-template">
+            <div class="products">
+                <h2 class="page__title">products</h2>
+                <article class="products__box--left">
+                    <div class="product__img">
+                        {{{ image }}}
+                    </div>
+                    <div class="product__info">
+                        <h3 class="product__name">01. {{ name }}</h3>
+                        <div class="product__description">
+                            <p>{{ description }}</p>
+                        </div>
+                        <div class="product__params">
+                            <p>roasting: {{ roasting }} /10</p>
+                            <p>intensity: {{ intensity }} /10</p>
+                        </div>
+                    </div>
+                </article>
+            </div>
         </script>
 
         <script id="template-contact">

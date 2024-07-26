@@ -7,6 +7,7 @@ export const select = {
   },
   templateOf: {
     home: '#template-home',
+    products: '#template-products',
     contact: '#template-contact',
   },
   nav: {
@@ -23,6 +24,13 @@ export const classNames = {
   }
 };
 
+export const settings = {
+  db: {
+    url: '//localhost:3131',
+    products: 'products',
+  },
+};
+
 export const templates = {
-  home: Handlebars.compile(document.querySelector(select.templateOf.home).innerHTML)
+  products: Handlebars.compile(document.querySelector(select.templateOf.products).innerHTML)
 };
