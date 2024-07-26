@@ -1,0 +1,38 @@
+.about {
+  background-image: url("../images/Images/about-us.jpg");
+  background-position: center top;
+  background-size: cover;
+  position: relative;
+  z-index: -1;
+  height: 800px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  &::after {
+    content: "";
+    background-color: $color-dark;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    opacity: 0.69;
+    z-index: -1;
+    top: 0;
+  }
+
+  .about__txt{
+    color: $color-light;
+    font-size: 34px;
+    letter-spacing: 1px;
+    font-weight: $font-semibold;
+    font-style: italic;
+    width: 850px;
+    text-align: left;
+
+    p:last-child {
+      text-align: right;
+      margin-right: -50px;
+    }
+  }
+
+}

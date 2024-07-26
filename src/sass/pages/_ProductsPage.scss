@@ -58,11 +58,11 @@
 }
 
 
-.products:nth-child(odd) .product__img {
+.products:nth-child(even) .product__img {
   order: 1;
 }
 
-.products:nth-child(odd) .product__info {
+.products:nth-child(even) .product__info {
   order: 2;
   padding-left: 102px;
   padding-right: 0;
