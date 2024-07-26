@@ -20,6 +20,7 @@
     flex: 1;
     padding-top: 68px;
     padding-right: 102px;
+    position: relative;
 
     .product__description {
       position: relative;
@@ -57,6 +58,17 @@
   }
 }
 
+.products:first-child .product__info { 
+  &::after {
+    content: "";
+    position: absolute;
+    bottom: 30px;
+    right: 80px;
+    width: 186px;
+    height: 168px;
+    background-image: url("../images/Images/badge.png");
+  }
+}  
 
 .products:nth-child(even) .product__img {
   order: 1;
