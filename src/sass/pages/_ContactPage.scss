@@ -41,3 +41,20 @@ form {
     font-weight: $font-semibold;
   }
 }
+
+@media (min-width: 376px) and (max-width: 667px) {
+  form .input-common {
+    width: 450px;
+  }
+}
+
+@media (max-width: 375px) {
+  form {
+    font-size: 20px;
+    letter-spacing: 3px;
+
+    .input-common {
+      width: 280px;
+    }
+  }
+}

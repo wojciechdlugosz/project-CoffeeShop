@@ -29,3 +29,52 @@ h3 {
   color: $color-dark;
   margin: 0;
 }
+
+@media (min-width: 668px) and (max-width: 1024px) {
+  h2 {
+    font-size: 56px;
+    letter-spacing: 8px;
+
+    &::after {
+      width: 630px;
+    }
+  }
+
+  h3 {
+    font-size: 30px;
+    letter-spacing: 2px;
+  }
+}
+
+@media (min-width: 376px) and (max-width: 667px) {
+  h2 {
+    font-size: 46px;
+    letter-spacing: 7px;
+
+    &::after {
+      width: 480px;
+    }
+  }
+
+  h3 {
+    font-size: 30px;
+    letter-spacing: 2px;
+  }
+}
+
+@media (max-width: 375px) {
+  h2 {
+    font-size: 42px;
+    letter-spacing: 6px;
+
+    &::after {
+      width: 360px;
+    }
+  }
+
+  h3 {
+    font-size: 28px;
+    letter-spacing: 1px;
+  }
+
+}

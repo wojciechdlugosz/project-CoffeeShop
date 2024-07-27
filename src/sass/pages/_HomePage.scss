@@ -1,5 +1,5 @@
 .about {
-  background-image: url("../images/Images/about-us.jpg");
+  background-image: url("../images/Images/about-us.avif"), url("../images/Images/about-us.webp"), url("../images/Images/about-us.jpg");
   background-position: center top;
   background-size: cover;
   position: relative;
@@ -35,4 +35,33 @@
     }
   }
 
+}
+
+@media (min-width: 668px) and (max-width: 1024px) {
+  .about .about__txt {
+    max-width: 770px;
+    font-size: 30px;
+  }
+}
+
+@media (min-width: 376px) and (max-width: 667px) {
+  .about .about__txt {
+    max-width: 400px;
+    font-size: 23px;
+
+    p:last-child {
+      margin-right: -20px;
+    }  
+  }
+}
+
+@media (max-width: 375px) {
+  .about .about__txt {
+    max-width: 260px;
+    font-size: 21px;
+
+    p:last-child {
+      margin-right: -10px;
+    }  
+  }
 }

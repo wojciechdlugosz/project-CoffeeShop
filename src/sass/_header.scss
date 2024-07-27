@@ -1,5 +1,5 @@
 .splash {
-  background-image: url("../images/Images/background.png");
+  background-image: url("../images/Images/background.avif"), url("../images/Images/background.webp"), url("../images/Images/background.jpg");
   height: 946px;
   background-position: center top;
   background-size: cover;
@@ -126,4 +126,166 @@
     }
   }
   
+}
+
+@media (min-width: 668px) and (max-width: 1024px) {
+  .splash {
+    height: 100vh;
+
+    .header {
+      width: 100%;
+
+      .header__logo {
+        .header__logo__title {
+          font-size: 28px;
+        }
+
+        .header__logo__subtitle {
+          font-size: 14px;
+          letter-spacing: 3px;
+        }
+      }
+
+      .header__nav {
+        margin-right: 56px;
+
+        a {
+          font-size: 14px;
+          padding-right: 16px;
+        }
+      }
+    }
+
+    .hero {
+      top: 30%;
+
+      .hero__title {
+        font-size: 60px;
+        letter-spacing: 8px;
+        line-height: 75px;
+      }
+
+      .hero__title--1 {
+        margin-left: 200px;
+      }
+
+      .hero__title--2 {
+        margin-right: 200px;
+      }
+
+      .hero__line {
+        margin-top: 44px;
+      }
+    }
+
+    .hero__discover {
+      top: 90%;
+      position: sticky;
+
+      .hero__discover__txt {
+        font-size: 24px;
+        padding-bottom: 16px;
+      }
+
+      .hero__discover__icon {
+        font-size: 24px;
+      }
+    }  
+  }
+}
+
+@media (min-width: 376px) and (max-width: 667px) {
+  .splash {
+    .header {
+      width: 100%;
+      padding-left: 40px;
+
+      .header__logo {
+        .header__logo__title {
+          font-size: 24px;
+          letter-spacing: 6px;
+        }
+
+        .header__logo__subtitle {
+          font-size: 12px;
+          letter-spacing: 3px;
+          font-weight: 700;
+        }
+      }
+
+      .header__nav a {
+        font-size: 14px;
+        padding-right: 40px;
+        display: flex;
+      }
+    }
+
+    .hero {
+      width: 100%;
+
+      .hero__title {
+        font-size: 70px;
+        letter-spacing: 7px;
+        line-height: 85px;
+      }
+
+      .hero__title--1 {
+        text-align: center;
+        margin: 0;
+      }
+
+      .hero__title--2 {
+        text-align: center;
+        margin: 0;
+      }
+
+      .hero__line {
+        margin-top: 40px;
+      }
+    }
+
+    .hero__discover {
+      .hero__discover__txt {
+        font-size: 24px;
+      }
+
+      .hero__discover__icon {
+        font-size: 30px;
+      }
+    }
+  }
+}
+
+@media (max-width: 375px) {
+  .splash {
+    .header {
+      padding-left: 30px;
+
+      .header__logo {
+        .header__logo__title {
+          font-size: 22px;
+          letter-spacing: 4px;
+        }
+
+        .header__logo__subtitle {
+          font-size: 10px;
+          letter-spacing: 2px;
+          font-weight: 700;
+        }
+      }
+
+      .header__nav a {
+        padding-right: 20px;
+        font-size: 12px;
+      }
+    }
+
+    .hero {
+      .hero__title {
+        font-size: 60px;
+        letter-spacing: 5px;
+        line-height: 75px;
+      }
+    }
+  }
 }
