@@ -9,7 +9,7 @@
   flex-direction: column;
   align-items: center;
   z-index: 0;
-  
+
   &::after {
     content: "";
     background-color: $color-dark;
@@ -19,17 +19,17 @@
     opacity: 0.69;
     z-index: 0;
   }
-  
+    
   .header {
     z-index: 1;
-    width: 1218px;
+    width: 68%;
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding-top: 32px;
     padding-left: 70px;
     position: absolute;
-  
+
     .header__logo{
       .header__logo__title {
         margin: 0;
@@ -38,7 +38,7 @@
         color: $color-light;
         font-weight: $font-black;
       }
-  
+
       .header__logo__subtitle {
         font-size: 16px;
         letter-spacing: 4px;
@@ -48,7 +48,7 @@
         padding: 5px 0 0 3px;
       }
     }
-  
+
     .header__nav a {
       opacity: 0.502;
       font-size: 18px;
@@ -58,37 +58,39 @@
       text-decoration: none;
       padding-right: 22px;
     }
-
+    
     .header__nav a.active {
       opacity: 1;
     }
   }
-  
+
   .hero {
     z-index: 1;
-    width: 1250px;
+    width: 65%;
     height: 169px;
-    top: 300px;
+    top: 25%;
     position: absolute;
-  
+
     .hero__title {
-      font-size: 100px;
+      font-size: 92px;
       letter-spacing: 16px;
-      line-height: 95px;
+      line-height: 30px;
       color: $color-main;
       font-weight: 700;
     }
-  
-    .hero__title--1 {
+
+    #title1 {
+      display: block;
       text-align: left;
-      margin: 0 0 0 48px;
+      line-height: normal;
     }
-  
-    .hero__title--2 {
+
+    #title2 {
+      display: block;
       text-align: right;
-      margin: 0;
+      line-height: normal;
     }
-  
+
     .hero__line {
       content: "";
       width: 270px;
@@ -100,14 +102,14 @@
       margin-top: 60px;
     }
   }
-  
+
   .hero__discover {
     z-index: 1;
-    top: 800px;
+    top: 85%;
     position: absolute;
     margin-bottom: 42px;
     text-align: center;
-  
+
     .hero__discover__txt {
       font-size: 34px;
       letter-spacing: 6px;
@@ -116,7 +118,7 @@
       margin: 0;
       padding-bottom: 32px;
     }
-  
+
     .hero__discover__icon {
       font-size: 40px;
       letter-spacing: 8px;
@@ -125,8 +127,8 @@
       margin: 0;
     }
   }
-  
 }
+
 
 @media (min-width: 668px) and (max-width: 1024px) {
   .splash {
@@ -160,19 +162,18 @@
       top: 30%;
 
       .hero__title {
-        font-size: 60px;
+        font-size: 84px;
         letter-spacing: 8px;
-        line-height: 75px;
       }
 
-      .hero__title--1 {
-        margin-left: 200px;
+      #title1 {
+        text-align: center;
       }
 
-      .hero__title--2 {
-        margin-right: 200px;
+      #title2 {
+        text-align: center;
       }
-
+  
       .hero__line {
         margin-top: 44px;
       }
@@ -181,12 +182,12 @@
     .hero__discover {
       top: 90%;
       position: sticky;
-
+  
       .hero__discover__txt {
         font-size: 24px;
         padding-bottom: 16px;
       }
-
+  
       .hero__discover__icon {
         font-size: 24px;
       }
@@ -221,22 +222,20 @@
     }
 
     .hero {
-      width: 100%;
+      width: 70%;
 
       .hero__title {
         font-size: 70px;
         letter-spacing: 7px;
-        line-height: 85px;
+        line-height: 35px;
       }
 
-      .hero__title--1 {
+      #title1 {
         text-align: center;
-        margin: 0;
       }
 
-      .hero__title--2 {
+      #title2 {
         text-align: center;
-        margin: 0;
       }
 
       .hero__line {
@@ -285,6 +284,14 @@
         font-size: 60px;
         letter-spacing: 5px;
         line-height: 75px;
+      }
+
+      #title1 {
+        text-align: center;
+      }
+
+      #title2 {
+        text-align: center;
       }
     }
   }
