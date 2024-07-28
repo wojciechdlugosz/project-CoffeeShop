@@ -13,6 +13,40 @@
       object-fit: cover;
       filter: drop-shadow(0 0 24.5px rgba(0,0,0,0.38));
     }
+
+    &::after {
+      content: "";
+      position: absolute;
+      top: -40px;
+      right: 40px;
+      border-style: solid;
+      border-width: 239px 159px 0 0;
+      border-color: $color-main transparent transparent transparent;
+      transform: rotate(90deg);
+    }
+
+    .product__price {
+      position: absolute;
+      top: 0;
+      right: 0;
+      color: $color-light;
+      z-index: 1;
+      line-height: 0;
+      letter-spacing: 1px;
+
+      p:first-of-type {
+        font-size: 18px;
+        text-decoration: line-through;
+        margin-right: 56px;
+        margin-top: 28px;
+      }
+
+      p:last-of-type {
+        font-size: 37px;
+        font-weight: $font-semibold;
+        margin-top: 40px;
+      }
+    }
   }
 
   .product__info {

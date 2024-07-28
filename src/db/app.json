@@ -2,6 +2,8 @@
     "products":[
         {
             "id":"coffee",
+            "old-price":36,
+            "new-price":25,
             "number":"01.",
             "name":"La Lagartija",
             "description":"Mysterious and treacherous... The best choice for the start of your journey! It will provide you a rich delicious flavor.",
@@ -11,6 +13,8 @@
         },
         {
             "id":"coffee",
+            "old-price":40,
+            "new-price":32,
             "number":"02.",
             "name":"El Tigre",
             "description":"Really dark coffee, only for the real gourmets. It has bitter flavor of grapefruits and is mixed with a little bit of peanuts with caramel.",
@@ -20,6 +24,8 @@
         },
         {
             "id":"coffee",
+            "old-price":30,
+            "new-price":22,
             "number":"03.",
             "name":"La Cucaracha",
             "description":"Sweet and intense with a big amount of different flavors. Caramel,  grapes, strwaberry, you name it! It’s great choice for warm summer days.",

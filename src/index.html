@@ -21,10 +21,10 @@
                     <a href="#contact">Contact</a>
                 </nav>
                 <div class="hero">
-                    <h1 class="hero__title">
-                        <span id="title1">home of</span>
+                    <h1 id="title__dynamic" class="hero__title">
+                        <span id="title1">.</span>
                         <br>
-                        <span id="title2">original tastes</span>
+                        <span id="title2">.</span>
                     </h1>
                     <div class="hero__line"></div>
                 </div>
@@ -64,6 +64,10 @@
                 <article class="products__box row">
                     <div class="product__img">
                         {{{ image }}}
+                        <div class="product__price">
+                            <p>{{ old-price }}$</p>
+                            <p>{{ new-price }}$</p>        
+                        </div>
                     </div>
                     <div class="product__info">
                         <h3 class="product__name">{{ number }} {{ name }}</h3>
