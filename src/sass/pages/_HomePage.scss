@@ -5,9 +5,7 @@
   position: relative;
   z-index: -1;
   height: 800px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+  padding-top: 30px;
 
   &::after {
     content: "";
@@ -20,48 +18,84 @@
     top: 0;
   }
 
-  .about__txt{
-    color: $color-light;
-    font-size: 34px;
-    letter-spacing: 1px;
-    font-weight: $font-semibold;
-    font-style: italic;
-    width: 850px;
-    text-align: left;
+  .main-carousel {
+    width: 40%;
+    margin: 0 auto;
 
-    p:last-child {
-      text-align: right;
-      margin-right: -50px;
+    .flickity-button {
+      display: none;
+    }
+
+    .carousel-cell {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: $color-light;
+      width: 100%;
+      counter-increment: gallery-cell;
+
+      .carousel-image {
+        flex: 0 0 50%;
+      }
     }
   }
 
+  .main-carousel .carousel-cell .carousel-description {
+    flex: 0 0 50%;
+    letter-spacing: 1px;
+
+    p:first-of-type {
+      font-size: 30px;
+
+      span {
+        font-weight: $font-semibold;
+      }
+    }
+
+    p:last-of-type {
+      font-size: 24px;
+      font-style: italic;
+    }
+  }    
+}
+
+@media (max-width: 1440px) {
+  .about .main-carousel {
+    width: 50%;
+
+    .carousel-description {
+      padding-left: 30px;
+    }
+  }
 }
 
 @media (min-width: 668px) and (max-width: 1024px) {
-  .about .about__txt {
-    max-width: 770px;
-    font-size: 30px;
+  .about .main-carousel {
+    width: 70%;
+
+    .carousel-cell {
+      .carousel-description {
+        padding-left: 30px;
+      }
+    }
   }
 }
 
-@media (min-width: 376px) and (max-width: 667px) {
-  .about .about__txt {
-    max-width: 400px;
-    font-size: 23px;
+@media (max-width: 667px) {
+  .about {
+    height: 80%;
 
-    p:last-child {
-      margin-right: -20px;
-    }  
-  }
-}
+    .main-carousel {
+      width: 70%;
 
-@media (max-width: 375px) {
-  .about .about__txt {
-    max-width: 260px;
-    font-size: 21px;
+      .carousel-cell {
+        display: flex;
+        flex-direction: column;
 
-    p:last-child {
-      margin-right: -10px;
-    }  
+        .carousel-description {
+          margin: 0 auto;
+        }
+      }
+    }
   }
 }

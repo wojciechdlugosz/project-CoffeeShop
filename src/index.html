@@ -5,11 +5,12 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta http-equiv="X-UA-Compatible" content="ie=edge">
         <title>Coffee Shop EL TIGRE</title>
-        <link href="https://fonts.cdnfonts.com/css/source-sans-pro" rel="stylesheet">
+        <link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css">
         <link rel="stylesheet" href="css/style.css">
     </head>
     <body>
-        <header class="splash">
+
+    <header class="splash">
             <div class="header">
                 <div class="header__logo">
                     <p class="header__logo__title">El Tigre</p>
@@ -20,89 +21,114 @@
                     <a href="#products">Products</a>
                     <a href="#contact">Contact</a>
                 </nav>
-                <div class="hero">
-                    <h1 id="title__dynamic" class="hero__title">
-                        <span id="title1">.</span>
-                        <br>
-                        <span id="title2">.</span>
-                    </h1>
-                    <div class="hero__line"></div>
-                </div>
-                <div class="hero__discover">
-                    <p class="hero__discover__txt">discover</p>
-                    <i class="hero__discover__icon icon-down-circled2"></i>
-                </div>
             </div>
-        </header>
+            <div class="hero">
+                <h1 id="title__dynamic" class="hero__title">
+                    <span id="title1">home of</span>
+                    <br>
+                    <span id="title2">original tastes</span>
+                </h1>
+                <div class="hero__line"></div>
+            </div>
+            <div class="hero__discover">
+                <p class="hero__discover__txt">discover</p>
+                <i class="hero__discover__icon icon-down-circled2"></i>
+            </div>
+    </header>
 
-        <div id="pages">
-            <section id="home">
-                <div class="home-wrapper">
-                    <h2 class="page__title">products</h2>
-                    <div class="products-wrapper container"></div>
-                    <article class="about">
-                        <h2 class="about__title page__title">about us</h2>
-                        <div class="about__txt">
-                            <p>Who are we? Just a bunch of friends with a love for a good coffee and desire to create something new, something original.</p>
-                            <p>Our coffees reflect us - young, wild and free.<br>We are on the journey of new tastes...</p>
-                            <p>Join us!</p>
-                        </div>
-                    </article>
-                </div>
-            </section>
-            <section id="products">
-                <h2 class="page__title">products</h2>
+    <div id="pages">
+        <section id="home">
+            <div class="home-wrapper">
+                <h2 class="page__title">products</h2>'
                 <div class="products-wrapper container"></div>
-            </section>
-            <section id="contact">
-                <div class="contact-wrapper"></div>
-            </section>
-        </div>
-
-        <script id="template-products" type="text/x-handlebars-template">
-            <div class="products">
-                <article class="products__box row">
-                    <div class="product__img">
-                        {{{ image }}}
-                        <div class="product__price">
-                            <p>{{ old-price }}$</p>
-                            <p>{{ new-price }}$</p>        
+                <article class="about">
+                    <h2 class="about__title page__title">about us</h2>
+                    <div class="main-carousel">
+                        <div class="carousel-cell">
+                            <div class="carousel-image">
+                                <img src="\images/Images/employee-1.png" alt="employee picture">
+                            </div>
+                            <div class="carousel-description">
+                                <p class="employee-name">Elizabeth <span>Doherty</span></p>
+                                <p class="employee-txt">Experienced barista from Bahamas. She says that Venezuela has opened her eyes on coffee. "It's not about the taste", she says. "It's all about the feelings".</p>
+                            </div>
                         </div>
-                    </div>
-                    <div class="product__info">
-                        <h3 class="product__name">{{ number }} {{ name }}</h3>
-                        <div class="product__description">
-                            <p>{{ description }}</p>
+                        <div class="carousel-cell">
+                            <div class="carousel-image">
+                                <img src="\images/Images/employee-2.png" alt="employee picture">
+                            </div>
+                            <div class="carousel-description">
+                                <p class="employee-name">Max <span>Selfish</span></p>
+                                <p class="employee-txt">Max is the austrian barista with years of experience from the hotels across the whole Europe. "Venezuela coffee was a lightening experience for me! I have never drink such an amazing coffee!", he says.</p>
+                            </div>
                         </div>
-                        <div class="product__params">
-                            <p>roasting:<span> {{ roasting }}/10 </span></p>
-                            <p>intensity:<span> {{ intensity }}/10 </span></p>
+                        <div class="carousel-cell">
+                            <div class="carousel-image">
+                                <img src="\images/Images/employee-3.png" alt="employee picture">
+                            </div>
+                            <div class="carousel-description">
+                                <p class="employee-name">Ping <span>Nihao</span></p>
+                                <p class="employee-txt">Ping is the youngest in the team. He doesn't like calling coffee a mystierious act. He says, a good coffe is like a mathematical formula. Once you figured it out, every coffee you make is a masterpiece</p>
+                            </div>
                         </div>
                     </div>
                 </article>
             </div>
-        </script>
+        </section>
+        <section id="products">
+            <h2 class="page__title">products</h2>'
+            <div class="products-wrapper container"></div>
+        </section>
+        <section id="contact">
+            <div class="contact-wrapper"></div>
+        </section>
+    </div>
 
-        <script id="template-contact">
-            <div class="contact">
-                <h2 class="page__title">contact us</h2>
-                <form>
-                    <label for="name">name</label>
-                    <input type="text" id="name" class="input-common" required></input>
-                    <label for="title">title</label>
-                    <input type="text" id="title" class="input-common"></input>
-                    <label for="message">message</label>
-                    <textarea id="message" class="input-common" required></textarea>
-                    <input type="submit" value="SUBMIT"/>
-                </form>
-            </div>
-        </script>
+    <script id="template-products" type="text/x-handlebars-template">
+        <div class="products">
+            <article class="products__box row">
+                <div class="product__img">
+                    {{{ image }}}
+                    <div class="product__price">
+                        <p>{{ old-price }}$</p>
+                        <p>{{ new-price }}$</p>        
+                    </div>
+                </div>
+                <div class="product__info">
+                    <h3 class="product__name">{{ number }} {{ name }}</h3>
+                    <div class="product__description">
+                        <p>{{ description }}</p>
+                    </div>
+                    <div class="product__params">
+                        <p>roasting:<span> {{ roasting }}/10 </span></p>
+                        <p>intensity:<span> {{ intensity }}/10 </span></p>
+                    </div>
+                </div>
+            </article>
+        </div>
+    </script>
 
-        <footer>
-            <p>© 2024 EL TIGRE inc.</p>
-        </footer>
+    <script id="template-contact">
+        <div class="contact">
+            <h2 class="page__title">contact us</h2>
+            <form>
+                <label for="name">name</label>
+                <input type="text" id="name" class="input-common" required></input>
+                <label for="title">title</label>
+                <input type="text" id="title" class="input-common"></input>
+                <label for="message">message</label>
+                <textarea id="message" class="input-common" required></textarea>
+                <input type="submit" value="SUBMIT"/>
+            </form>
+        </div>
+    </script>
 
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.1.0/handlebars.min.js"></script>
-        <script src="js/app.js" type="module"></script>
-    </body>
+    <footer>
+        <p>© 2024 EL TIGRE inc.</p>
+    </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.1.0/handlebars.min.js"></script>
+    <script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
+    <script src="js/app.js" type="module"></script>
+</body>
 </html>
